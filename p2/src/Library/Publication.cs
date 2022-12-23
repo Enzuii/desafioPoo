@@ -17,6 +17,7 @@ namespace Ucu.Poo.Defense
             }
         }
 
+
         private IList<PublicationItem> items = new List<PublicationItem>();
 
         public Publication(DateTime endDate)
@@ -32,6 +33,15 @@ namespace Ucu.Poo.Defense
         public void RemoveItem(PublicationItem item)
         {
             this.items.Remove(item);
+        }
+        public string AsText()
+        {
+            string AsText = "";
+            foreach (PublicationItem item in this.items)
+            {
+                AsText += item.Material.Name + " " + item.Quantity + " " + item.Price + "\n";
+            }
+            return AsText;
         }
     }
 }
