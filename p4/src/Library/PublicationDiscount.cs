@@ -14,6 +14,10 @@ namespace Ucu.Poo.Defense
             }
             set
             {
+                if (value > 0)
+                {
+                    throw new ArgumentException("El importe debe ser negativo");
+                }
                 this.amount = value;
             }
         }

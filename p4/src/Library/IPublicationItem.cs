@@ -2,6 +2,6 @@ namespace Ucu.Poo.Defense
 {
     public interface IPublicationItem
     {
-        int SubTotal{get; set;}     
+        int SubTotal{get;}     
     }
 }
